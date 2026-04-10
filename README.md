@@ -2,6 +2,8 @@
 
 Basically, my takeaway on the first feature from the video that was i am to build a feature that keeps track of spending within a team, to avoid waste of funds and also inputs expenditures automatically. So i created a mock company, VandGross Construction Co., then firstly, i needed data so i went and gave mock allocated budgets for four departments(project management, engineering, procurement & health and safety), i gave the amount of $10k, $50k, $200k and $5k respectively, then i requested a research for how the allocated budgets would most likely be spent in a construction company and i got results. I used and refined the results for my data in which was inputed to this project.
 
+I had issues deploying this project on the original repository on vercel so i had to create this new repository locally and pushed the code to it, then i was able to deploy successfully. This is the original repository => https://github.com/NOMANLIKEOLA/Atomity-Frontend-Task
+
 Live Demo → https://vandgross-dashboard.vercel.app/ 
 
 ---
@@ -35,11 +37,11 @@ npm run dev
 
 ## Architecture Decisions
 
-- **No UI libraries** — every component built from scratch
-- **Design tokens** — all hex values live exclusively in globals.css as CSS custom properties; components never reference raw hex
-- **Caching** — TanStack Query with 5-minute stale time; zero redundant requests on revisit
-- **Animations** — scroll-triggered via useInView, reduced-motion respected throughout
-- **Modern CSS** — clamp(), color-mix(), CSS nesting, container queries, logical properties, :has()
+- No UI libraries — every component built from scratch
+- Design tokens — all hex values live exclusively in globals.css as CSS custom properties; components never reference raw hex
+- Caching — TanStack Query with 5-minute stale time; zero redundant requests on revisit
+- Animations — scroll-triggered via useInView, reduced-motion respected throughout
+- Modern CSS — clamp(), color-mix(), CSS nesting, container queries, logical properties, :has()
 
 ---
 

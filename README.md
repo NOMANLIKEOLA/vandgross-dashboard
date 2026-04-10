@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VandGross Construction Co. — Budget Control Dashboard
 
-## Getting Started
+Basically, my takeaway on the first feature from the video that was i am to build a feature that keeps track of spending within a team, to avoid waste of funds and also inputs expenditures automatically. So i created a mock company, VandGross Construction Co., then firstly, i needed data so i went and gave mock allocated budgets for four departments(project management, engineering, procurement & health and safety), i gave the amount of $10k, $50k, $200k and $5k respectively, then i requested a research for how the allocated budgets would most likely be spent in a construction company and i got results. I used and refined the results for my data in which was inputed to this project.
 
-First, run the development server:
+Live Demo → https://vandgross-dashboard.vercel.app/ 
 
-```bash
+---
+
+## Tech Stack
+
+Next.js 15 · TypeScript · Framer Motion · TanStack Query v5 · Tailwind CSS v4
+
+---
+
+## Features
+
+- Department cards with budget, spend, balance, and net return — animated on scroll
+- Expand-all toggle to view every department's full report in one view
+- Custom SVG bar chart with Budget vs Spend and Net Return % modes
+- Per-department detail report — expense breakdown, insights, recommendations, live activity feed
+- API-enriched metrics via DummyJSON and JSONPlaceholder with TanStack Query caching
+- Dark/light mode with localStorage persistence
+- Fully responsive — mobile, tablet, and desktop
+
+---
+
+## Local Development
+
+bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Architecture Decisions
 
-To learn more about Next.js, take a look at the following resources:
+- **No UI libraries** — every component built from scratch
+- **Design tokens** — all hex values live exclusively in globals.css as CSS custom properties; components never reference raw hex
+- **Caching** — TanStack Query with 5-minute stale time; zero redundant requests on revisit
+- **Animations** — scroll-triggered via useInView, reduced-motion respected throughout
+- **Modern CSS** — clamp(), color-mix(), CSS nesting, container queries, logical properties, :has()
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by Ahmed Oladipo for the Atomity Frontend Engineering Challenge.
